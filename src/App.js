@@ -7,6 +7,7 @@ import MainHeader from './components/MainHeader';
 import TalkWithMe from './components/TalkWithMe';
 import People from './components/People';
 import Events from './components/Events';
+import Forms from './components/Forms';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       {/* Start TalkWithMe */}
       <TalkWithMe nickname='Leonardo'/>
       <TalkWithMe nickname='Cauã'/>
-      <TalkWithMe nickname/>
+      <TalkWithMe nickname='Suzane'/>
       {/* End TalkWithMe */}
 
       {/* Start People */}
@@ -45,11 +46,13 @@ function App() {
       {/* End People */}
 
       {/* Start Buttons */}
-      <Events
-        // Phrase="Teste"
-      />
+      <Events Phrase = 'Teste'/>
       {/* End Buttons */}
       
+      {/*Start Forms */}
+      <Forms/>
+      {/*End Forms*/}
+
       <Footer/>
     </div>
   );

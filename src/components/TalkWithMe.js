@@ -15,8 +15,4 @@ TalkWithMe.propTypes = {
     nickname: PropTypes.string.isRequired,
 }
 
-TalkWithMe.defaultProps = {
-    nickname: "NA",
-}
-
 export default TalkWithMe;

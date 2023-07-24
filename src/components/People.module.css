@@ -1,0 +1,22 @@
+.Peoples{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0 10px;
+}
+
+.People{
+    border: cadetblue;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+}
+
+.PeoplePicture{
+    border-radius: 10px;
+    width: 60px;
+}

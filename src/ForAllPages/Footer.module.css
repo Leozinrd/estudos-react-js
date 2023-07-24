@@ -1,0 +1,13 @@
+.Footer {
+    position: fixed;
+    width: 100%;
+    bottom: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+.GitHubIcon{
+    width: 40px;
+    height: 40px;
+}

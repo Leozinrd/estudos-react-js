@@ -1,11 +1,11 @@
 import './btn.css';
 import styles from './Events.module.css';
 
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-function Events(){
+function Events({Phrase}){
 
-    function OnClickButtonActivate({Phrase}){
+    function OnClickButtonActivate(){
         console.log(`Ativado ${Phrase}`);
     }
 
@@ -27,10 +27,5 @@ function Events(){
     )
 
 }
-
-Events.propTypes = {
-    Phrase: PropTypes.string,
-}
-
 
 export default Events

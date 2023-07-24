@@ -2,22 +2,22 @@
 
 Estudando curso de React do Matheus Battisti gratuito no Youtube.
 
-# Como iniciar o app
+## Como iniciar o app
 
  No diretório do projeto, faça:
 
-#    Com yarn:
+###    Com yarn:
     yarn install    
-#    Caso não tenha yarn instalado, usar npm install --global yarn e em seguida yarn --version para verificar se foi instalado e versão
+####   Caso não tenha yarn instalado, usar npm install --global yarn e em seguida yarn --version para verificar se foi instalado e versão
 
-#    Com npm
+###    Com npm
     npm install
     
-# Em seguida:
+## Em seguida:
 
-#    Com yarn:
+###    Com yarn:
     yarn start
-#    Com npm:
+###    Com npm:
     npm start
 
 ## Início do app

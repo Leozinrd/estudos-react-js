@@ -1,4 +1,4 @@
-import styles from './TalkWithMe.module.css'
+import styles from './talkWithMe.module.css'
 import PropTypes from 'prop-types';
 
 function TalkWithMe({nickname}){

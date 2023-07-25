@@ -1,4 +1,4 @@
-function MainHeader(){
+function Header(){
 
     return (
         <>
@@ -10,4 +10,4 @@ function MainHeader(){
 
 }
 
-export default MainHeader;
+export default Header;

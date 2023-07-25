@@ -1,5 +1,5 @@
-import './btn.css';
-import styles from './Events.module.css';
+import './buttonActivate.css';
+import styles from './events.module.css';
 
 // import PropTypes from 'prop-types';
 

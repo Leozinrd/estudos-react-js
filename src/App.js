@@ -2,12 +2,12 @@ import './App.css';
 import './Reset.css'
 import './Normalize.css';
 
-import Footer from './components/Footer';
-import MainHeader from './components/MainHeader';
-import TalkWithMe from './components/TalkWithMe';
-import People from './components/People';
-import Events from './components/Events';
-import Forms from './components/Forms';
+import Header from './components/Header/header';
+import TalkWithMe from './components/TalkWithMe/talkWithMe';
+import People from './components/People/people';
+import Events from './components/Events/events';
+import Forms from './components/Forms/forms';
+import Footer from './components/Footer/footer'
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
   return (
 
     <div className="App">
-      <MainHeader/>
+      <Header/>
 
       {/* Start TalkWithMe */}
       <TalkWithMe nickname='Leonardo'/>

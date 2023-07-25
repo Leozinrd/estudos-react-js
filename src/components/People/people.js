@@ -1,4 +1,4 @@
-import styles from './People.module.css';
+import styles from './people.module.css';
 import PropTypes from 'prop-types';
 
 function People({EmployerName, Age, Profession, EmployerPicture}){

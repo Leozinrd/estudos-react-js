@@ -1,7 +1,10 @@
 .Footer {
+    background: rgb(173,173,173);
+    background: linear-gradient(0deg, rgba(173,173,173,1) 0%, rgba(217,217,217,1) 30%, rgba(240,240,240,1) 54%);
     position: fixed;
     width: 100%;
-    bottom: 2%;
+    height: 3rem;
+    bottom: 0%;
     display: flex;
     justify-content: space-around;
     align-items: center;

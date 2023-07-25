@@ -3,8 +3,8 @@ import styles from './forms.module.css';
 function Form(){
     return(
         <>
-
-            <form className={styles.Forms}>
+        <section className={styles.Forms}>
+            <form className={styles.FormUser}>
                 <label className={styles.Lb} htmlFor="name">Nome:</label>
                     <input name="nome" id='nome' type='text' className={styles.Infos} placeholder='Nome Completo'/>
 
@@ -15,7 +15,7 @@ function Form(){
                     <button id={styles.Clear} type='reset'>Limpar</button>
 
             </form>
-
+        </section>
         </>
     )
 }

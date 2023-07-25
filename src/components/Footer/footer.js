@@ -3,7 +3,7 @@ import styles from '../Footer/footer.module.css';
 function Footer(){
 
     const emailCreator = 'LEONARDO.SILVA@ADVANCE.COM.BR';
-    const urlGitHubImage = 'https://w7.pngwing.com/pngs/490/316/png-transparent-computer-icons-github-github-icon-cat-like-mammal-carnivoran-black.png';
+    const urlGitHubImage = 'https://pngimg.com/d/github_PNG80.png';
     const creator = 'Leonardo';
 
     return (

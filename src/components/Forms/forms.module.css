@@ -1,4 +1,10 @@
 .Forms{
+    display: flex;
+    width: 100%;
+    height: -webkit-fill-available;
+    padding: 0 0 1rem 0;
+}
+.FormUser{
     background-color: #cecece;
     border-radius: 10px;
     padding: 20px;

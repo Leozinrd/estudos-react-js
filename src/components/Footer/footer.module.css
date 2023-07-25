@@ -1,5 +1,4 @@
 .Footer {
-    background: rgb(173,173,173);
     background: linear-gradient(0deg, rgba(173,173,173,1) 0%, rgba(217,217,217,1) 30%, rgba(240,240,240,1) 54%);
     position: fixed;
     width: 100%;
@@ -13,4 +12,12 @@
 .GitHubIcon{
     width: 40px;
     height: 40px;
+}
+
+@media screen and (max-width: 768px){
+    .Footer{
+        height: auto;
+        flex-wrap: wrap;
+        padding: 0.5rem 0 0.5rem 0;
+    }
 }

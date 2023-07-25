@@ -25,6 +25,7 @@ function App() {
       {/* End TalkWithMe */}
 
       {/* Start People */}
+      <section className='SectionPeople'>
       <People 
         EmployerPicture='https://avatars.githubusercontent.com/u/75439898?v=4'
         EmployerName="Leonardo"
@@ -43,6 +44,7 @@ function App() {
         Age={27}
         Profession="Desenvolvedora front-end"
       />
+      </section>
       {/* End People */}
 
       {/* Start Buttons */}

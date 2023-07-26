@@ -1,10 +1,16 @@
 import styles from './forms.module.css';
 
 function Form(){
+
+    function cadastrarDados(e){
+        e.preventDefault();
+        console.log(`Daddos enviados com sucesso!`)
+    }
+
     return(
         <>
         <section className={styles.Forms}>
-            <form className={styles.FormUser}>
+            <form onSubmit={cadastrarDados} className={styles.FormUser}>
                 <label className={styles.Lb} htmlFor="name">Nome:</label>
                     <input name="nome" id='nome' type='text' className={styles.Infos} placeholder='Nome Completo'/>
 

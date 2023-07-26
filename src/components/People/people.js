@@ -10,10 +10,14 @@ function People({EmployerName, Age, Profession, EmployerPicture}){
         <>
             <div className={styles.Peoples}>
                 <section className={styles.People}>
-                    <img className={styles.PeoplePicture} src={EmployerPicture} alt={EmployerName}/>
-                    <h2 className="">Nome: {EmployerName}</h2>
-                    <p className="">Idade: {Age}</p>
-                    <p className="">Profissão: {Profession}</p>
+                    <div className={styles.ImagePeople}>
+                        <img className={styles.PeoplePicture} src={EmployerPicture} alt={EmployerName}/>
+                    </div>
+                    <div className={styles.TextPeople}>
+                        <h2 className="">Nome: {EmployerName}</h2>
+                        <p className="">Idade: {Age}</p>
+                        <p className="">Profissão: {Profession}</p>
+                    </div>
                 </section>
             </div>
         </>

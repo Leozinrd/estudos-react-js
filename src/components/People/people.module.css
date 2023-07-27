@@ -9,11 +9,11 @@
     border: cadetblue;
     border-style: solid;
     border-radius: 10px;
-    padding: 1rem 12%;
+    padding: 1rem 8%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 50%;
     height: 85%;
 }
 
@@ -50,5 +50,13 @@
         justify-content: space-between;
         height: fit-content;
         padding: 1rem 5%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px){
+    .People{
+        width: 75%;
+        justify-content: space-between;
+        padding: 1rem 10%;
     }
 }

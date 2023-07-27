@@ -4,15 +4,20 @@ import FormUser from './formUser.module.css';
 
 function Form(){
 
-    function cadastrarDados(e){
+    function register(e){
         e.preventDefault();
-        console.log(`Daddos enviados com sucesso!`)
+        console.log(`Daddos enviados com sucesso!`);
+    }
+
+    function loginUser(e){
+        e.preventDefault();
+        console.log('Login efetuado');
     }
 
     return(
         <>
         <section className={stylesForms.Forms}>
-            <form onSubmit={cadastrarDados} className={stylesFormDados.FormDados}>
+            <form onSubmit={register} className={stylesFormDados.FormDados}>
                 
                 <label className={stylesFormDados.Lb} htmlFor="name">Nome:</label>
                     <input name="nome" id='nome' type='text' className={stylesFormDados.Infos} placeholder='Nome Completo'/>
@@ -26,16 +31,16 @@ function Form(){
             </form>
 
             <section className={FormUser.LoginBox}>
-                <form className={FormUser.FormUser}>
+                <form onSubmit={loginUser} className={FormUser.FormUser}>
                     <div className={FormUser.UserBox}>
-                        <label htmlFor='name'></label>
-                        <input type='text' id='name' name='name' placeholder='Usuário' required=''></input>
+                        <label htmlFor='name'>Usuário:</label>
+                        <input type='text' id='name' name='name' placeholder='Digite seu usuário' required=''></input>
                     </div>
                     <div className={FormUser.UserBox}>
-                        <label htmlFor='password'></label>
-                        <input type='password' placeholder='Senha' required=''></input>
+                        <label htmlFor='password'>Senha:</label>
+                        <input type='password' id='password' name='password' placeholder='Digite sua senha' required=''></input>
                     </div><center>
-                    <a href='#'>SEND
+                    <a>SEND
                         <span></span>
                     </a></center>
                 </form>

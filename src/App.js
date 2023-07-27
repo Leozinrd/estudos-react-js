@@ -48,7 +48,7 @@ function App() {
       {/* End People */}
 
       {/* Start Buttons */}
-      <Events Phrase = 'Teste'/>
+      <Events/>
       {/* End Buttons */}
       
       {/*Start Forms */}

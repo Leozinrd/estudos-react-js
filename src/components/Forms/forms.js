@@ -19,7 +19,7 @@ function Form(){
 
     function loginUser(e){
         e.preventDefault();
-        console.log(`${userLogin}, login efetuado!`);
+        console.log(`${userLogin}\n login efetuado!`);
     }
 
     return(
@@ -28,10 +28,22 @@ function Form(){
             <form onSubmit={register} className={stylesFormDados.FormDados}>
                 
                 <label className={stylesFormDados.Lb} htmlFor="userName">Nome:</label>
-                    <input name="userName" id='userName' type='text' className={stylesFormDados.Infos} placeholder='Nome Completo' onChange={(e) => setUserName(e.target.value)} required/>
+                    <input className={stylesFormDados.Infos} 
+                    name="userName" 
+                    id='userName' 
+                    type='text'  
+                    placeholder='Nome Completo' 
+                    onChange={(e) => setUserName(e.target.value)} 
+                    required/>
 
                     <label htmlFor='email' className={stylesFormDados.Lb}>Email:</label>
-                    <input htmlFor='email' id='email' type='email' className={stylesFormDados.Infos} placeholder='seuemail@domínio.com.br' onChange={(e) => setUserEmail(e.target.value)} required/>
+                    <input className={stylesFormDados.Infos} 
+                    htmlFor='email' 
+                    id='email' 
+                    type='email' 
+                    placeholder='seuemail@domínio.com.br' 
+                    onChange={(e) => setUserEmail(e.target.value)} 
+                    required/>
 
                     <button id={stylesFormDados.Send} type='submit'>Enviar</button>
                     <button id={stylesFormDados.Clear} type='reset'>Limpar</button>
@@ -42,11 +54,22 @@ function Form(){
                 <form onSubmit={loginUser} className={FormUser.FormUser}>
                     <div className={FormUser.UserBox}>
                         <label htmlFor='userLogin'>Usuário:</label>
-                        <input type='text' id='userLogin' name='userLogin' placeholder='Digite seu usuário' onChange={(e) => setUserLogin(e.target.value)} required></input>
+                        <input 
+                        type='text' 
+                        id='userLogin' 
+                        name='userLogin'
+                        placeholder='Digite seu usuário' 
+                        onChange={(e) => setUserLogin(e.target.value)} 
+                        required/>
                     </div>
                     <div className={FormUser.UserBox}>
                         <label htmlFor='password'>Senha:</label>
-                        <input type='password' id='password' name='password' placeholder='Digite sua senha' required></input>
+                        <input 
+                        type='password' 
+                        id='password'
+                        name='password' 
+                        placeholder='Digite sua senha' 
+                        required/>
                     </div><center>
                     <button className={FormUser.Login} onClick={loginUser}>SEND
                         <span></span>

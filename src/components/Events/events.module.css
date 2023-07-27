@@ -1,5 +1,5 @@
 .Buttons{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 5px 0 5px 0;
 }

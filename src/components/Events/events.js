@@ -1,28 +1,23 @@
-import './buttonActivate.css';
 import styles from './events.module.css';
 
-// import PropTypes from 'prop-types';
+import EventButton from "./EventButton/eventButton"
 
-function Events({Phrase}){
+function Events(){
 
-    function OnClickButtonActivate(){
-        console.log(`Ativado ${Phrase}`);
+    function FirstEventActivate(){
+        console.log(`Primeiro evento tivado!`)
+    }
+
+    function SecondEventActivate() {
+        console.log(`Segundo evento ativado!`)
     }
 
     return(
         <>
-        <div className={styles.Buttons}>
-                <button onClick={OnClickButtonActivate} className="btn" type="button">
-                  <strong>Activate!</strong>
-                      <div id="container-stars">
-                      <div id="stars"></div>
-                  </div>
-                  <div id="glow">
-                      <div className="circle"></div>
-                      <div className="circle"></div>
-                  </div>
-              </button>
-        </div>
+            <div className={styles.Buttons}>
+                <EventButton event={FirstEventActivate} text="Teste primeiro evento"/>
+                <EventButton event={SecondEventActivate} text="Teste segundo evento"/>
+            </div>
         </>
     )
 

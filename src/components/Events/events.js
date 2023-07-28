@@ -15,8 +15,10 @@ function Events(){
     return(
         <>
             <div className={styles.Buttons}>
-                <EventButton event={FirstEventActivate} text="Teste primeiro evento"/>
-                <EventButton event={SecondEventActivate} text="Teste segundo evento"/>
+                <section className={styles.ButtonsSection}>
+                    <EventButton event={FirstEventActivate} text="Teste primeiro evento"/>
+                    <EventButton event={SecondEventActivate} text="Teste segundo evento"/>
+                </section>
             </div>
         </>
     )

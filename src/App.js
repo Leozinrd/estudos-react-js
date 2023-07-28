@@ -7,6 +7,7 @@ import TalkWithMe from './components/TalkWithMe/talkWithMe';
 import People from './components/People/people';
 import Events from './components/Events/events';
 import Forms from './components/Forms/forms';
+import Conditional from './components/Conditional/conditional';
 import Footer from './components/Footer/footer'
 
 function App() {
@@ -51,6 +52,10 @@ function App() {
         {/* Start Buttons */}
         <Events/>
         {/* End Buttons */}
+
+        {/* Start Conditional */}
+        <Conditional/>
+        {/* End Conditional */}
         
         {/*Start Forms */}
         <Forms/>

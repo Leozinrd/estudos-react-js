@@ -1,5 +1,21 @@
 .Buttons{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 5px 0 5px 0;
+}
+
+.ButtonsSection{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px){
+    .Buttons{
+        height: 15vh;
+    }
+    .ButtonsSection{
+        flex-wrap: wrap;
+        height: 100%;
+    }
 }

@@ -16,46 +16,48 @@ function App() {
   return (
 
     <div className="App">
-      <Header/>
-
-      {/* Start TalkWithMe */}
-      <TalkWithMe nickname='Leonardo'/>
-      <TalkWithMe nickname='Cauã'/>
-      <TalkWithMe nickname='Suzane'/>
-      {/* End TalkWithMe */}
-
-      {/* Start People */}
-      <section className='SectionPeople'>
-      <People 
-        EmployerPicture='https://avatars.githubusercontent.com/u/75439898?v=4'
-        EmployerName="Leonardo"
-        Age={24}
-        Profession="Estagiário front-end"
-      />
-      <People 
-        EmployerPicture={urlPictureAlternative}
-        EmployerName="Cauã"
-        Age={21}
-        Profession="Estagiário front-end"
-      />
-      <People 
-        EmployerPicture={urlPictureAlternative}
-        EmployerName="Suzane"
-        Age={27}
-        Profession="Desenvolvedora front-end"
-      />
+      <section className='Webpage'>
+        <Header/>
+    
+        {/* Start TalkWithMe */}
+        <TalkWithMe nickname='Leonardo'/>
+        <TalkWithMe nickname='Cauã'/>
+        <TalkWithMe nickname='Suzane'/>
+        {/* End TalkWithMe */}
+    
+        {/* Start People */}
+        <section className='SectionPeople'>
+        <People 
+          EmployerPicture='https://avatars.githubusercontent.com/u/75439898?v=4'
+          EmployerName="Leonardo"
+          Age={24}
+          Profession="Estagiário front-end"
+        />
+        <People 
+          EmployerPicture={urlPictureAlternative}
+          EmployerName="Cauã"
+          Age={21}
+          Profession="Estagiário front-end"
+        />
+        <People 
+          EmployerPicture={urlPictureAlternative}
+          EmployerName="Suzane"
+          Age={27}
+          Profession="Desenvolvedora front-end"
+        />
+        </section>
+        {/* End People */}
+    
+        {/* Start Buttons */}
+        <Events/>
+        {/* End Buttons */}
+        
+        {/*Start Forms */}
+        <Forms/>
+        {/*End Forms*/}
+    
+        <Footer/>
       </section>
-      {/* End People */}
-
-      {/* Start Buttons */}
-      <Events/>
-      {/* End Buttons */}
-      
-      {/*Start Forms */}
-      <Forms/>
-      {/*End Forms*/}
-
-      <Footer/>
     </div>
   );
 }

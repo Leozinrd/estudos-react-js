@@ -1,15 +1,20 @@
 .Forms{
     display: flex;
-    width: 100%;
-    height: -webkit-fill-available;
-    padding: 0 0 1rem 0;
     margin-top: 5%;
     margin-bottom: 7%;
+    justify-content: center;
+}
+
+.FormsSection{
+    width: 90vw;
+    display: flex;
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 460px){
-    .Forms{
+@media screen and (max-width: 768px){
+    .FormsSection{
+        width: 80%;
         flex-wrap: wrap;
+        height: 80vh;
     }
 }

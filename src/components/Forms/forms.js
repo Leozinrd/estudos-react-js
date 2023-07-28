@@ -24,59 +24,61 @@ function Form(){
 
     return(
         <>
-        <section className={stylesForms.Forms}>
-            <form onSubmit={register} className={stylesFormDados.FormDados}>
-                
-                <label className={stylesFormDados.Lb} htmlFor="userName">Nome:</label>
-                    <input className={stylesFormDados.Infos} 
-                    name="userName" 
-                    id='userName' 
-                    type='text'  
-                    placeholder='Nome Completo' 
-                    onChange={(e) => setUserName(e.target.value)} 
-                    required/>
-
-                    <label htmlFor='email' className={stylesFormDados.Lb}>Email:</label>
-                    <input className={stylesFormDados.Infos} 
-                    htmlFor='email' 
-                    id='email' 
-                    type='email' 
-                    placeholder='seuemail@domínio.com.br' 
-                    onChange={(e) => setUserEmail(e.target.value)} 
-                    required/>
-
-                    <button id={stylesFormDados.Send} type='submit'>Enviar</button>
-                    <button id={stylesFormDados.Clear} type='reset'>Limpar</button>
-
-            </form>
-
-            <section className={FormUser.LoginBox}>
-                <form onSubmit={loginUser} className={FormUser.FormUser}>
-                    <div className={FormUser.UserBox}>
-                        <label htmlFor='userLogin'>Usuário:</label>
-                        <input 
-                        type='text' 
-                        id='userLogin' 
-                        name='userLogin'
-                        placeholder='Digite seu usuário' 
-                        onChange={(e) => setUserLogin(e.target.value)} 
+        <div className={stylesForms.Forms}>
+            <section className={stylesForms.FormsSection}>
+                <form onSubmit={register} className={stylesFormDados.FormDados}>
+                    
+                    <label className={stylesFormDados.Lb} htmlFor="userName">Nome:</label>
+                        <input className={stylesFormDados.Infos} 
+                        name="userName" 
+                        id='userName' 
+                        type='text'  
+                        placeholder='Nome Completo' 
+                        onChange={(e) => setUserName(e.target.value)} 
                         required/>
-                    </div>
-                    <div className={FormUser.UserBox}>
-                        <label htmlFor='password'>Senha:</label>
-                        <input 
-                        type='password' 
-                        id='password'
-                        name='password' 
-                        placeholder='Digite sua senha' 
+    
+                        <label htmlFor='email' className={stylesFormDados.Lb}>Email:</label>
+                        <input className={stylesFormDados.Infos} 
+                        htmlFor='email' 
+                        id='email' 
+                        type='email' 
+                        placeholder='seuemail@domínio.com.br' 
+                        onChange={(e) => setUserEmail(e.target.value)} 
                         required/>
-                    </div><center>
-                    <button className={FormUser.Login} onClick={loginUser}>SEND
-                        <span></span>
-                    </button></center>
+    
+                        <button id={stylesFormDados.Send} type='submit'>Enviar</button>
+                        <button id={stylesFormDados.Clear} type='reset'>Limpar</button>
+        
                 </form>
+        
+                <section className={FormUser.LoginBox}>
+                    <form onSubmit={loginUser} className={FormUser.FormUser}>
+                        <div className={FormUser.UserBox}>
+                            <label htmlFor='userLogin'>Usuário:</label>
+                            <input 
+                            type='text' 
+                            id='userLogin' 
+                            name='userLogin'
+                            placeholder='Digite seu usuário' 
+                            onChange={(e) => setUserLogin(e.target.value)} 
+                            required/>
+                        </div>
+                        <div className={FormUser.UserBox}>
+                            <label htmlFor='password'>Senha:</label>
+                            <input 
+                            type='password' 
+                            id='password'
+                            name='password' 
+                            placeholder='Digite sua senha' 
+                            required/>
+                        </div><center>
+                        <button className={FormUser.Login} onClick={loginUser}>SEND
+                            <span></span>
+                        </button></center>
+                    </form>
+                </section>
             </section>
-        </section>
+        </div>
         </>
     )
 }

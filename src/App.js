@@ -17,7 +17,6 @@ function App() {
   return (
 
     <div className="App">
-      <section className='Webpage'>
         <Header/>
     
         {/* Start TalkWithMe */}
@@ -64,7 +63,6 @@ function App() {
         {/*End Forms*/}
     
         <Footer/>
-      </section>
     </div>
   );
 }

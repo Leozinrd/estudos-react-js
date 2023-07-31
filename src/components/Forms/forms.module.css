@@ -6,7 +6,7 @@
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 468px){
     .Forms{
         flex-wrap: wrap;
     }

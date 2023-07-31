@@ -1,4 +1,4 @@
-import styles from './conditional.module.css';
+import style from './conditional.module.css';
 
 import { useState } from "react";
 
@@ -27,34 +27,36 @@ function Conditional (){
     return (
         
         <>
-        <div className={styles.Conditional}>
-            <p className={styles.ConditionalHeader}>Cadastre seu e-mail</p>
+        <div className={style.Conditional}>
+            <p className={style.ConditionalHeader}>Cadastre seu e-mail</p>
 
-                <input className={styles.ConditionalEmail}
+                <input 
+                    className={style.ConditionalEmail}
                     placeholder='Digite seu e-mail'
                     name='ConditionalEmail'
                     type='email'
                     onChange={(e) => setConditionalEmail(e.target.value)}
-                    disabled={inputBlocked} // desabilita o input e-mail
-                /><br/>
+                    disabled={inputBlocked}
+                />
 
                     {sendVisible && (
-                        <div
-                            className={styles.ConditionalSubmit}
+                        <button
+                            className={style.ConditionalSubmit}
                             type='submit'
                             onClick={conditionalSendEmail}
                         >
-                            Enviar
-                        </div>
+                            <span>Enviar</span>
+                        </button>
                     )}
 
                     {conditionalUserEmail && (
                         <div>
-                            <p>O e-mail do usuário é: {conditionalEmail}</p>
+                            <p className={style.EmailWrited}>O e-mail do usuário é: {conditionalEmail}</p>
                             <button 
-                            onClick={conditionalClearEmail}
-                            style={{backgroundColor: 'grey', borderRadius: '10px', padding: '10px'}}
-                            >Limpar Email</button>
+                                className={style.ConditionalClear}
+                                onClick={conditionalClearEmail}
+                                style={{backgroundColor: 'grey', borderRadius: '10px', padding: '10px'}}
+                            ><span>Limpar e-mail</span></button>
                         </div>
                     )}
         </div>

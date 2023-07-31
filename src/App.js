@@ -54,7 +54,9 @@ function App() {
         {/* End Buttons */}
 
         {/* Start Conditional */}
-        <Conditional/>
+        <section className='SectionConditional'>
+          <Conditional/>
+        </section>
         {/* End Conditional */}
         
         {/*Start Forms */}

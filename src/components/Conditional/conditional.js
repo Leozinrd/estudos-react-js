@@ -14,12 +14,15 @@ function Conditional (){
         setConditionalUserEmail(conditionalEmail);
         setSendVisible(false); //Esconde a div
         setInputBlocked(true); //Bloqueia o input e-mail
+        console.log(`E-mail "${conditionalEmail.toUpperCase()}" enviado!`);
     }
 
     function conditionalClearEmail(){
-        setConditionalUserEmail('');
+        setConditionalUserEmail(false);
+        setConditionalEmail('');
         setSendVisible(true); //Torna a div visível
         setInputBlocked(false); //Desbloqueia o input e-mail
+        console.log(`E-mail apagado do input className={style.ConditionalEmail}`);
     }
 
 
@@ -35,6 +38,7 @@ function Conditional (){
                     placeholder='Digite seu e-mail'
                     name='ConditionalEmail'
                     type='email'
+                    value={conditionalEmail}
                     onChange={(e) => setConditionalEmail(e.target.value)}
                     disabled={inputBlocked}
                 />
@@ -51,7 +55,7 @@ function Conditional (){
 
                     {conditionalUserEmail && (
                         <div>
-                            <p className={style.EmailWrited}>O e-mail do usuário é: {conditionalEmail}</p>
+                            <p className={style.EmailWrited}>O e-mail do usuário é: {conditionalEmail.toLowerCase()}</p>
                             <button 
                                 className={style.ConditionalClear}
                                 onClick={conditionalClearEmail}

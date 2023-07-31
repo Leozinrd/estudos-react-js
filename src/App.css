@@ -42,6 +42,12 @@
   margin-top: 25px;
 }
 
+@media screen and (max-width: 968px){
+  .SectionConditional{
+    grid-template-columns: 100%;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

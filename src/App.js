@@ -17,52 +17,57 @@ function App() {
   return (
 
     <div className="App">
-        <Header/>
-    
-        {/* Start TalkWithMe */}
-        <TalkWithMe nickname='Leonardo'/>
-        <TalkWithMe nickname='Cauã'/>
-        <TalkWithMe nickname='Suzane'/>
-        {/* End TalkWithMe */}
-    
-        {/* Start People */}
-        <section className='SectionPeople'>
-        <People 
-          EmployerPicture='https://avatars.githubusercontent.com/u/75439898?v=4'
-          EmployerName="Leonardo"
-          Age={24}
-          Profession="Estagiário front-end"
-        />
-        <People 
-          EmployerPicture={urlPictureAlternative}
-          EmployerName="Cauã"
-          Age={21}
-          Profession="Estagiário front-end"
-        />
-        <People 
-          EmployerPicture={urlPictureAlternative}
-          EmployerName="Suzane"
-          Age={27}
-          Profession="Desenvolvedora front-end"
-        />
-        </section>
-        {/* End People */}
-    
-        {/* Start Buttons */}
-        <Events/>
-        {/* End Buttons */}
+        <div className='Content'>
+          <Header/>
 
-        {/* Start Conditional */}
-        <section className='SectionConditional'>
-          <Conditional/>
-        </section>
-        {/* End Conditional */}
+          {/* Start TalkWithMe */}
+          <TalkWithMe nickname='Leonardo'/>
+          <TalkWithMe nickname='Cauã'/>
+          <TalkWithMe nickname='Suzane'/>
+          {/* End TalkWithMe */}
+
+          {/* Start People */}
+          <section className='SectionPeople'>
+          <People 
+            EmployerPicture='https://avatars.githubusercontent.com/u/75439898?v=4'
+            EmployerName="Leonardo"
+            Age={24}
+            Profession="Estagiário front-end"
+          />
+          <People 
+            EmployerPicture={urlPictureAlternative}
+            EmployerName="Cauã"
+            Age={21}
+            Profession="Estagiário front-end"
+          />
+          <People 
+            EmployerPicture={urlPictureAlternative}
+            EmployerName="Suzane"
+            Age={27}
+            Profession="Desenvolvedora front-end"
+          />
+          </section>
+          {/* End People */}
+
+          {/* Start Buttons */}
+          <Events/>
+          {/* End Buttons */}
+
+          {/* Start Conditional */}
+          <section className='SectionConditional'>
+            <Conditional/>
+          </section>
+          {/* End Conditional */}
+
+          {/*Start Forms */}
+          <Forms/>
+          {/*End Forms*/}
+        </div>
+
+        <div className='Footer'>
+          <Footer/>
+        </div>
         
-        {/*Start Forms */}
-        <Forms/>
-        {/*End Forms*/}
-    
-        <Footer/>
     </div>
   );
 }

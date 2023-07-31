@@ -5,15 +5,21 @@ import { useState } from "react";
 function Conditional (){
 
     const [conditionalEmail, setConditionalEmail] = useState();
-    const [conditionalUserEmail, setConditionalUserEmail] = useState();
+    const [conditionalUserEmail, setConditionalUserEmail] = useState(false);
+    const [sendVisible, setSendVisible] = useState(true);
+    const [inputBlocked, setInputBlocked] = useState(false);
 
     function conditionalSendEmail(e){
         e.preventDefault();
         setConditionalUserEmail(conditionalEmail);
+        setSendVisible(false); //Esconde a div
+        setInputBlocked(true); //Bloqueia o input e-mail
     }
 
     function conditionalClearEmail(){
-        setConditionalUserEmail('')
+        setConditionalUserEmail('');
+        setSendVisible(true); //Torna a div visível
+        setInputBlocked(false); //Desbloqueia o input e-mail
     }
 
 
@@ -22,33 +28,35 @@ function Conditional (){
         
         <>
         <div className={styles.Conditional}>
-            <h2 className={styles.ConditionalHeader}>Cadastre seu e-mail</h2>
+            <p className={styles.ConditionalHeader}>Cadastre seu e-mail</p>
 
-                <form className='ConditionalEmail'>
+                <input className={styles.ConditionalEmail}
+                    placeholder='Digite seu e-mail'
+                    name='ConditionalEmail'
+                    type='email'
+                    onChange={(e) => setConditionalEmail(e.target.value)}
+                    disabled={inputBlocked} // desabilita o input e-mail
+                /><br/>
 
-                    <input 
-                        type="email"
-                        placeholder="Digite seu e-mail"
-                        required
-                        onChange={(e) => setConditionalEmail(e.target.value)}
-                    />
-                    <button
-                        type="submit"
-                        onClick={conditionalSendEmail}
-                        style={{backgroundColor: 'grey', borderRadius: '10px', padding : '10px'}}
-                    >Enviar e-mail</button>
+                    {sendVisible && (
+                        <div
+                            className={styles.ConditionalSubmit}
+                            type='submit'
+                            onClick={conditionalSendEmail}
+                        >
+                            Enviar
+                        </div>
+                    )}
+
                     {conditionalUserEmail && (
                         <div>
                             <p>O e-mail do usuário é: {conditionalEmail}</p>
-                            <button onClick={conditionalClearEmail}
+                            <button 
+                            onClick={conditionalClearEmail}
                             style={{backgroundColor: 'grey', borderRadius: '10px', padding: '10px'}}
                             >Limpar Email</button>
                         </div>
                     )}
-
-                </form>
-
-
         </div>
         </>
 

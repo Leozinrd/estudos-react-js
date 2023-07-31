@@ -36,6 +36,12 @@
   padding: 1rem 0 1rem 0;
 }
 
+.SectionConditional{
+  display: grid;
+  grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+  margin-top: 25px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

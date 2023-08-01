@@ -71,7 +71,11 @@ function Form(){
                         placeholder='Digite sua senha' 
                         required/>
                     </div><center>
-                    <button className={FormUser.Login} onClick={loginUser}>SEND
+                    <button 
+                        className={FormUser.Login} 
+                        // onClick={loginUser}
+                    >
+                        SEND
                         <span></span>
                     </button></center>
                 </form>

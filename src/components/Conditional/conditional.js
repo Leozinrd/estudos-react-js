@@ -22,7 +22,7 @@ function Conditional (){
         setConditionalEmail('');
         setSendVisible(true); //Torna a div visível
         setInputBlocked(false); //Desbloqueia o input e-mail
-        console.log(`E-mail apagado do input className={style.ConditionalEmail}`);
+        console.log(`E-mail apagado do input className=ConditionalEmail`);
     }
 
 

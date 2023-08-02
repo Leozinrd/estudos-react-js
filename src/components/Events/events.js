@@ -1,4 +1,7 @@
-import styles from './events.module.css';
+import {
+    Buttons,
+    ButtonsSection
+} from './styles'
 
 import EventButton from "./EventButton/eventButton"
 
@@ -14,12 +17,12 @@ function Events(){
 
     return(
         <>
-            <div className={styles.Buttons}>
-                <section className={styles.ButtonsSection}>
+            <Buttons>
+                <ButtonsSection>
                     <EventButton event={FirstEventActivate} text="Teste primeiro evento"/>
                     <EventButton event={SecondEventActivate} text="Teste segundo evento"/>
-                </section>
-            </div>
+                </ButtonsSection>
+            </Buttons>
         </>
     )
 

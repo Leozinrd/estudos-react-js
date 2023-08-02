@@ -1,4 +1,9 @@
-import styles from './people.module.css';
+import { 
+    Peoples, 
+    SectionPeople, 
+    PeoplePicture,
+    TextPeople,
+}   from './styles'
 
 import PropTypes from 'prop-types';
 
@@ -8,18 +13,18 @@ function People({EmployerName, Age, Profession, EmployerPicture}){
 
     return(
         <>
-            <div className={styles.Peoples}>
-                <section className={styles.People}>
-                    <div className={styles.ImagePeople}>
-                        <img className={styles.PeoplePicture} src={EmployerPicture} alt={EmployerName}/>
+            <Peoples>
+                <SectionPeople>
+                    <div>
+                        <PeoplePicture src={EmployerPicture} alt={EmployerName}/>
                     </div>
-                    <div className={styles.TextPeople}>
-                        <h2 className="">Nome: {EmployerName}</h2>
-                        <p className="">Idade: {Age}</p>
-                        <p className="">Profissão: {Profession}</p>
-                    </div>
-                </section>
-            </div>
+                    <TextPeople>
+                        <h2>Nome: {EmployerName}</h2>
+                        <p>Idade: {Age}</p>
+                        <p>Profissão: {Profession}</p>
+                    </TextPeople>
+                </SectionPeople>
+            </Peoples>
         </>
     )
 }

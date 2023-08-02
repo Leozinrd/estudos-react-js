@@ -1,8 +1,18 @@
-import stylesForms from './forms.module.css'
-import stylesFormDados from './formDados.module.css';
-import FormUser from './formUser.module.css';
-
 import {useState} from 'react';
+
+import {
+    Forms,
+    FormDados,
+    Label,
+    Infos,
+    Send,
+    Clear,
+    LoginBox,
+    FormUser,
+    UserBox,
+    Login
+} from './styles';
+
 
 function Form(){
 
@@ -24,11 +34,11 @@ function Form(){
 
     return(
         <>
-        <section className={stylesForms.Forms}>
-            <form onSubmit={register} className={stylesFormDados.FormDados}>
+        <Forms>
+            <FormDados onSubmit={register}>
                 
-                <label className={stylesFormDados.Lb} htmlFor="userName">Nome:</label>
-                    <input className={stylesFormDados.Infos} 
+                <Label htmlFor="userName">Nome:</Label>
+                    <Infos 
                     name="userName" 
                     id='userName' 
                     type='text'  
@@ -36,8 +46,8 @@ function Form(){
                     onChange={(e) => setUserName(e.target.value)} 
                     required/>
 
-                    <label htmlFor='email' className={stylesFormDados.Lb}>Email:</label>
-                    <input className={stylesFormDados.Infos} 
+                    <Label htmlFor='email'>Email:</Label>
+                    <Infos 
                     htmlFor='email' 
                     id='email' 
                     type='email' 
@@ -45,14 +55,14 @@ function Form(){
                     onChange={(e) => setUserEmail(e.target.value)} 
                     required/>
 
-                    <button id={stylesFormDados.Send} type='submit'>Enviar</button>
-                    <button id={stylesFormDados.Clear} type='reset'>Limpar</button>
+                    <Send type='submit'>Enviar</Send>
+                    <Clear type='reset'>Limpar</Clear>
 
-            </form>
+            </FormDados>
 
-            <section className={FormUser.LoginBox}>
-                <form onSubmit={loginUser} className={FormUser.FormUser}>
-                    <div className={FormUser.UserBox}>
+            <LoginBox>
+                <FormUser onSubmit={loginUser}>
+                    <UserBox>
                         <label htmlFor='userLogin'>Usuário:</label>
                         <input 
                         type='text' 
@@ -61,8 +71,8 @@ function Form(){
                         placeholder='Digite seu usuário' 
                         onChange={(e) => setUserLogin(e.target.value)} 
                         required/>
-                    </div>
-                    <div className={FormUser.UserBox}>
+                    </UserBox>
+                    <UserBox>
                         <label htmlFor='password'>Senha:</label>
                         <input 
                         type='password' 
@@ -70,17 +80,14 @@ function Form(){
                         name='password' 
                         placeholder='Digite sua senha' 
                         required/>
-                    </div><center>
-                    <button 
-                        className={FormUser.Login} 
-                        // onClick={loginUser}
-                    >
-                        SEND
+                    </UserBox>
+                    <center><Login // onClick={loginUser} 
+                    >SEND
                         <span></span>
-                    </button></center>
-                </form>
-            </section>
-        </section>
+                    </Login></center>
+                </FormUser>
+            </LoginBox>
+        </Forms>
         </>
     )
 }

@@ -1,17 +1,25 @@
-import './buttonActivate.css';
+// import './buttonActivate.css';
+import {
+    Button,
+    Strong,
+    ContainerStars,
+    Stars,
+    Glow,
+    Circle
+} from './styles'
 
 function EventButton (props){
     return(
-        <button className="btn" onClick={props.event} type="button">
-          <strong>{props.text}</strong>
-              <div id="container-stars">
-              <div id="stars"></div>
-          </div>
-          <div id="glow">
-              <div className="circle"></div>
-              <div className="circle"></div>
-          </div>
-      </button>
+        <Button onClick={props.event} type="button">
+          <Strong>{props.text}</Strong>
+              <ContainerStars>
+              <Stars></Stars>
+          </ContainerStars>
+          <Glow>
+              <Circle></Circle>
+              <Circle></Circle>
+          </Glow>
+      </Button>
     )
 }
 

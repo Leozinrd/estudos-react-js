@@ -10,7 +10,10 @@ import {
     LoginBox,
     FormUser,
     UserBox,
-    Login
+    Login,
+    UserLabel,
+    UserInput,
+    Span
 } from './styles';
 
 
@@ -63,8 +66,8 @@ function Form(){
             <LoginBox>
                 <FormUser onSubmit={loginUser}>
                     <UserBox>
-                        <label htmlFor='userLogin'>Usuário:</label>
-                        <input 
+                        <UserLabel htmlFor='userLogin'>Usuário:</UserLabel>
+                        <UserInput
                         type='text' 
                         id='userLogin' 
                         name='userLogin'
@@ -73,8 +76,8 @@ function Form(){
                         required/>
                     </UserBox>
                     <UserBox>
-                        <label htmlFor='password'>Senha:</label>
-                        <input 
+                        <UserLabel htmlFor='password'>Senha:</UserLabel>
+                        <UserInput 
                         type='password' 
                         id='password'
                         name='password' 
@@ -83,7 +86,7 @@ function Form(){
                     </UserBox>
                     <center><Login // onClick={loginUser} 
                     >SEND
-                        <span></span>
+                        <Span></Span>
                     </Login></center>
                 </FormUser>
             </LoginBox>

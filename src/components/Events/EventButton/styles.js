@@ -1,5 +1,57 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
+
+const animStar = keyframes`
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+`
+
+const animStarRotate = keyframes`
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+`
+
+const gradient301 = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+`
+
+const pulse3011 = keyframes`
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+`
 
 export const ContainerStars = styled.div`
     position: absolute;
@@ -10,6 +62,11 @@ export const ContainerStars = styled.div`
     transition: 0.5s;
     backdrop-filter: blur(1rem);
     border-radius: 5rem;
+
+    &:hover{
+        z-index: 1;
+        background-color: #212121;
+    }
 `
 
 export const Button = styled.button`
@@ -22,7 +79,7 @@ export const Button = styled.button`
     backdrop-filter: blur(1rem);
     border-radius: 5rem;
     transition: 0.5s;
-    animation: gradient_301 5s ease infinite;
+    animation: ${gradient301} 5s ease infinite;
     border: double 4px transparent;
     background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
     background-origin: border-box;
@@ -38,7 +95,9 @@ export const Button = styled.button`
         background-origin: border-box;
         background-clip: content-box, border-box;
         animation: none;
-    }
+    };
+
+    &:hover 
 `
 
 export const Strong = styled.strong`
@@ -63,9 +122,22 @@ export const Stars = styled.div`
         left: -100rem;
         width: 100%;
         height: 100%;
-        animation: animStarRotate 90s linear infinite;
+        animation: ${animStarRotate} 90s linear infinite;
         background-image: radial-gradient(#ffffff 1px, transparent 1%);
         background-size: 50px 50px;
+    };
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 170%;
+        height: 500%;
+        animation: ${animStar} 60s linear infinite;
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+        opacity: 0.5;
     }
 `
 
@@ -79,7 +151,7 @@ export const Circle = styled.div`
     width: 100%;
     height: 30px;
     filter: blur(2rem);
-    animation: pulse_3011 4s infinite;
+    animation: ${pulse3011} 4s infinite;
     z-index: -1;
 
     &:nth-of-type(1){

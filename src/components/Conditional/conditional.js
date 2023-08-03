@@ -1,6 +1,16 @@
-import style from './conditional.module.css';
-
 import { useState } from "react";
+
+import {
+    DivConditional,
+    ConditionalHeader,
+    ConditionalEmail,
+    ConditionalSubmit,
+    EmailWrited,
+    ConditionalClear,
+    SpanEnviar,
+    SpanClear
+} from './styles'
+
 
 function Conditional (){
 
@@ -30,11 +40,10 @@ function Conditional (){
     return (
         
         <>
-        <div className={style.Conditional}>
-            <p className={style.ConditionalHeader}>Cadastre seu e-mail</p>
+        <DivConditional>
+            <ConditionalHeader>Cadastre seu e-mail</ConditionalHeader>
 
-                <input 
-                    className={style.ConditionalEmail}
+                <ConditionalEmail
                     placeholder='Digite seu e-mail'
                     name='ConditionalEmail'
                     type='email'
@@ -44,26 +53,24 @@ function Conditional (){
                 />
 
                     {sendVisible && (
-                        <button
-                            className={style.ConditionalSubmit}
+                        <ConditionalSubmit
                             type='submit'
                             onClick={conditionalSendEmail}
                         >
-                            <span>Enviar</span>
-                        </button>
+                            <SpanEnviar>Enviar</SpanEnviar>
+                        </ConditionalSubmit>
                     )}
 
                     {conditionalUserEmail && (
                         <div>
-                            <p className={style.EmailWrited}>O e-mail do usuário é: {conditionalEmail.toLowerCase()}</p>
-                            <button 
-                                className={style.ConditionalClear}
+                            <EmailWrited>O e-mail do usuário é: {conditionalEmail.toLowerCase()}</EmailWrited>
+                            <ConditionalClear
                                 onClick={conditionalClearEmail}
                                 style={{backgroundColor: 'grey', borderRadius: '10px', padding: '10px'}}
-                            ><span>Limpar e-mail</span></button>
+                            ><SpanClear>Limpar e-mail</SpanClear></ConditionalClear>
                         </div>
                     )}
-        </div>
+        </DivConditional>
         </>
 
     )

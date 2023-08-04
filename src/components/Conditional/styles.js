@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 export const DivConditional = styled.div`
     grid-column-start: 2;
@@ -15,7 +16,18 @@ export const ConditionalHeader = styled.p`
 `
 
 export const ConditionalEmail = styled.input`
+    border: 1px solid ${props => props.disabled ? 'gray' : 'black'};
+    border-radius: 10px;
+    background-color: white;
+    width: 75%;
+    margin: 0 0 10px 0;
 
+    ${props =>
+        props.disabled &&
+        css`
+          background-color: #000000;
+          color:white;
+        `}
 `
 
 export const ConditionalSubmit = styled.button`
@@ -61,6 +73,7 @@ export const EmailWrited = styled.p`
     border-radius: 10px;
     padding: 1.5px 5px;
     font-size: smaller;
+    margin: 0 0 10px 0;
 `
 
 export const ConditionalClear = styled.button`

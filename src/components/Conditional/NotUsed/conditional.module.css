@@ -1,0 +1,21 @@
+/* Start InputBlocked quando o input e-mail estiver bloqueado */
+.InputBlocked{
+    background-color: black;
+}
+/* End InputBlocked */
+
+/* Start media screen */
+@media screen and (max-width: 620px){
+    .Conditional{
+    grid-column-start: 1;
+    margin: 0 10%;
+    }
+}
+
+@media screen and (min-width: 621px) and (max-width: 968px){
+    .Conditional{
+        grid-column-start: 1;
+        margin: 0 25%;
+    }
+}
+/* End media screen */

@@ -21,10 +21,15 @@ function Conditional (){
 
     function conditionalSendEmail(e){
         e.preventDefault();
-        setConditionalUserEmail(conditionalEmail);
-        setSendVisible(false); //Esconde a div
-        setInputBlocked(true); //Bloqueia o input e-mail
-        console.log(`E-mail "${conditionalEmail.toUpperCase()}" enviado!`);
+
+        if (conditionalEmail){
+            setConditionalUserEmail(conditionalEmail);
+            setSendVisible(false); //Esconde a div
+            setInputBlocked(true); //Bloqueia o input e-mail
+            console.log(`E-mail "${conditionalEmail.toUpperCase()}" enviado!`);
+        } else {
+            console.log(`Digite um e-mail válido antes de enviar!`)
+        }
     }
 
     function conditionalClearEmail(){
@@ -50,12 +55,14 @@ function Conditional (){
                     value={conditionalEmail}
                     onChange={(e) => setConditionalEmail(e.target.value)}
                     disabled={inputBlocked}
+                    required
                 />
 
                     {sendVisible && (
                         <ConditionalSubmit
                             type='submit'
                             onClick={conditionalSendEmail}
+                            disabled={!conditionalEmail || inputBlocked}
                         >
                             <SpanEnviar>Enviar</SpanEnviar>
                         </ConditionalSubmit>

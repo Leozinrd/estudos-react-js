@@ -1,9 +1,3 @@
-/* Start InputBlocked quando o input e-mail estiver bloqueado */
-.InputBlocked{
-    background-color: black;
-}
-/* End InputBlocked */
-
 /* Start media screen */
 @media screen and (max-width: 620px){
     .Conditional{

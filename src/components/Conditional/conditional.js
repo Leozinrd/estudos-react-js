@@ -73,7 +73,7 @@ function Conditional (){
                             <EmailWrited>O e-mail do usuário é: {conditionalEmail.toLowerCase()}</EmailWrited>
                             <ConditionalClear
                                 onClick={conditionalClearEmail}
-                                style={{backgroundColor: 'grey', borderRadius: '10px', padding: '10px'}}
+                                style={{backgroundColor: 'grey', borderRadius: '0.625rem', padding: '0.625rem'}}
                             ><SpanClear>Limpar e-mail</SpanClear></ConditionalClear>
                         </div>
                     )}

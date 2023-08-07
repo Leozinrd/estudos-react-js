@@ -44,7 +44,7 @@ const pulse3011 = keyframes`
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0.625rem rgba(0, 0, 0, 0);
   }
 
   100% {
@@ -80,7 +80,7 @@ export const Button = styled.button`
     border-radius: 5rem;
     transition: 0.5s;
     animation: ${gradient301} 5s ease infinite;
-    border: double 4px transparent;
+    border: double 0.25rem transparent;
     background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -91,7 +91,7 @@ export const Button = styled.button`
     };
 
     &:active{
-        border: double 4px #FE53BB;
+        border: double 0.25rem #FE53BB;
         background-origin: border-box;
         background-clip: content-box, border-box;
         animation: none;
@@ -103,10 +103,10 @@ export const Button = styled.button`
 export const Strong = styled.strong`
     z-index: 2;
     font-family: 'Avalors Personal Use';
-    font-size: 12px;
-    letter-spacing: 5px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3125rem;
     color: #FFFFFF;
-    text-shadow: 0 0 4px white;
+    text-shadow: 0 0 0.25rem white;
 `
 
 export const Stars = styled.div`
@@ -123,8 +123,8 @@ export const Stars = styled.div`
         width: 100%;
         height: 100%;
         animation: ${animStarRotate} 90s linear infinite;
-        background-image: radial-gradient(#ffffff 1px, transparent 1%);
-        background-size: 50px 50px;
+        background-image: radial-gradient(#ffffff 0.0625rem, transparent 1%);
+        background-size: 3.125rem 3.125rem;
     };
 
     &::before{
@@ -135,8 +135,8 @@ export const Stars = styled.div`
         width: 170%;
         height: 500%;
         animation: ${animStar} 60s linear infinite;
-        background-image: radial-gradient(#ffffff 1px, transparent 1%);
-        background-size: 50px 50px;
+        background-image: radial-gradient(#ffffff 0.0625rem, transparent 1%);
+        background-size: 3.125rem 3.125rem;
         opacity: 0.5;
     }
 `
@@ -149,7 +149,7 @@ export const Glow = styled.div`
 
 export const Circle = styled.div`
     width: 100%;
-    height: 30px;
+    height: 1.875rem;
     filter: blur(2rem);
     animation: ${pulse3011} 4s infinite;
     z-index: -1;

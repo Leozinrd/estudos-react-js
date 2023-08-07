@@ -21,26 +21,26 @@ export const Forms = styled.section`
 
 export const FormDados = styled.form`
     background-color: #cecece;
-    border-radius: 10px;
-    padding: 20px;
-    width: 340px;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    width: 21.25rem;
 `
 
 export const Label = styled.label`
     display: flex;
     justify-content: center;
-    margin: 0 0 10px 0;
-    font-size: 18px;
+    margin: 0 0 0.625rem 0;
+    font-size: 1.125rem;
     font-weight: bold;
 `
 
 export const Infos = styled.input`
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     background-color: #a1a1a1;
     color: white;
 `
@@ -53,7 +53,7 @@ export const Send = styled.button`
     border: .25em solid var(--glow-color);
     padding: 1em 2em;
     color: black;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
     background-color: var(--btn-color);
     border-radius: 1em;
@@ -97,7 +97,7 @@ export const Clear = styled.button`
     border: .25em solid var(--glow-color);
     padding: 1em 2em;
     color: var(--glow-color);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
     background-color: var(--btn-color);
     border-radius: 1em;
@@ -134,13 +134,13 @@ export const Clear = styled.button`
 `
 
 export const LoginBox = styled.section`
-    width: 340px;
+    width: 21.25rem;
     height: fit-content;
-    padding: 40px;
+    padding: 2.5rem;
     background: rgba(24, 20, 20, 0.987);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+    box-shadow: 0 0.9375rem 1.5625rem rgba(0,0,0,.6);
+    border-radius: 0.625rem;
 `
 
 export const FormUser = styled.form``
@@ -150,24 +150,24 @@ export const UserBox = styled.div``
 export const Login = styled.button`
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px;
+    margin-top: 2.5rem;
+    letter-spacing: 0.25rem;
 
     &:hover{
         background: #03f40f;
         color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 5px #03f40f,
-                    0 0 25px #03f40f,
-                    0 0 50px #03f40f,
-                    0 0 100px #03f40f;
+        border-radius: 0.3125rem;
+        box-shadow: 0 0 0.3125rem #03f40f,
+                    0 0 1.5625rem #03f40f,
+                    0 0 3.125rem #03f40f,
+                    0 0 6.25rem #03f40f;
         cursor: pointer;
     }
 `
@@ -177,10 +177,10 @@ export const Span = styled.span`
     display: block;
 
     &:nth-child(1){
-        bottom: 2px;
+        bottom: 0.125rem;
         left: -100%;
         width: 100%;
-        height: 2px;
+        height: 0.125rem;
         background: linear-gradient(90deg, transparent, #03f40f);
         animation: ${btnAnim1} 2s linear infinite;
     }
@@ -188,12 +188,12 @@ export const Span = styled.span`
 
 export const UserInput = styled.input`
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 0.0625rem solid #fff;
     outline: none;
     background: transparent;
 `
@@ -202,8 +202,8 @@ export const UserLabel = styled.label`
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
     color: #fff;
     pointer-events: none;
     transition: .5s;

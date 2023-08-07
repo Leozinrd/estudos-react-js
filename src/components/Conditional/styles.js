@@ -4,23 +4,23 @@ import { css } from "@emotion/react";
 export const DivConditional = styled.div`
     grid-column-start: 2;
     background-color: #cecece;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 `
 
 export const ConditionalHeader = styled.p`
-    margin: 10px 0;
+    margin: 0.625rem 0;
 `
 
 export const ConditionalEmail = styled.input`
-    border: 1px solid ${props => props.disabled ? 'gray' : 'black'};
-    border-radius: 10px;
+    border: 0.0625rem solid ${props => props.disabled ? 'gray' : 'black'};
+    border-radius: 0.625rem;
     background-color: white;
     width: 75%;
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
 
     ${props =>
         props.disabled &&
@@ -37,8 +37,8 @@ export const ConditionalSubmit = styled.button`
     background-color: #212121;
     border: 0.08em solid #fff;
     border-radius: 0.3em;
-    font-size: 12px;
-    margin-top: 15px;
+    font-size: 0.75rem;
+    margin-top: 0.9375rem;
 `
 
 export const SpanEnviar = styled.span`
@@ -70,10 +70,10 @@ export const SpanEnviar = styled.span`
 
 export const EmailWrited = styled.p`
     background-color: aliceblue;
-    border-radius: 10px;
-    padding: 1.5px 5px;
+    border-radius: 0.625rem;
+    padding: 1.0.3125rem 0.3125rem;
     font-size: smaller;
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
 `
 
 export const ConditionalClear = styled.button`
@@ -88,8 +88,8 @@ export const ConditionalClear = styled.button`
     display: inline-block;
     letter-spacing: 0.05rem;
     font-weight: 700;
-    font-size: 17px;
-    border-radius: 500px;
+    font-size: 1.0625rem;
+    border-radius: 31.25rem;
     overflow: hidden;
     background: #66ff66;
     color: ghostwhite;

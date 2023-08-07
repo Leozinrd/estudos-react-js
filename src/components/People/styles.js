@@ -10,7 +10,7 @@ export const Peoples = styled.div`
 export const SectionPeople = styled.section`
     border: cadetblue;
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     padding: 1rem 8%;
     display: flex;
     justify-content: space-between;
@@ -20,8 +20,8 @@ export const SectionPeople = styled.section`
 `
 
 export const PeoplePicture = styled.img`
-    border-radius: 10px;
-    width: 60px;
+    border-radius: 0.625rem;
+    width: 3.75rem;
 `
 
 export const TextPeople = styled.div`

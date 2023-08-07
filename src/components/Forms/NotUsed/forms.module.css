@@ -1,9 +1,0 @@
-@media screen and (max-width: 720px){
-    .Forms{
-        flex-wrap: wrap;
-    }
-
-    .FormDados{
-        margin: 10px 0;
-    }
-}
